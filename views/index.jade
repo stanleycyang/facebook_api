@@ -3,3 +3,10 @@ extends layout
 block content
   h1= title
   a(href='./logout') Logout
+  p= user._json.id
+  p= user._json.birthday
+  p= user._json.email
+  p= user._json.name
+  p= user._json.gender
+  a(href=user._json.link) My Facebook
+  p= user._json.location.name

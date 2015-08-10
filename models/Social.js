@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 var SocialSchema = new mongoose.Schema({
     provider: String,
+    s_id: String,
     refreshToken: String,
     accessToken: String,
     verified: Boolean,

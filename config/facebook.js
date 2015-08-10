@@ -11,6 +11,7 @@ passport.use(new FacebookStrategy({
     callbackURL: "http://localhost:3000/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {
+      console.log(profile);
       // Find the user
       User.findOne({email: profile._json.email}, function(error, person){
           // If person doesn't exist, create them
@@ -23,6 +24,7 @@ passport.use(new FacebookStrategy({
 
             user.social.push({
                 provider: profile.provider,
+                s_id: profile._json.id,
                 refreshToken: refreshToken,
                 accessToken: accessToken,
                 verified: profile._json.verified,
@@ -35,7 +37,6 @@ passport.use(new FacebookStrategy({
                 console.log(user);
             });
           }
-          console.log(person.social);
 
 
           // User is already in database
