@@ -14,13 +14,13 @@
 
 - Go to this link: [Facebook Dev Console](https://developers.facebook.com/)
 
-![Facebook Dev Console](./fb_developer.png)
+![Facebook Dev Console](./img/fb_developer.png)
 
 - Hover over `My Apps` and click `Add a New App`
 
 - Choose `www` for `Website`
 
-![Quick Start](./quick_start.png)
+![Quick Start](./img/quick_start.png)
 
 - Add http://localhost to the main input
 
